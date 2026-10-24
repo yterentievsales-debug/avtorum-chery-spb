@@ -390,8 +390,7 @@
       var d = w.querySelector('input[name="day"]:checked');
       var t = w.querySelector('input[name="time"]:checked');
       var msg = 'Здравствуйте! Хочу записаться: ' + (m ? m.value : 'модель уточню') + ', ' +
-        (s ? s.dataset.name : 'услуга уточню') + ', ' + (d ? d.dataset.full : 'день уточню') + ' в ' +
-        (t ? t.value : 'время уточню') + '. Марку, год и что беспокоит напишу ниже.';
+        (s ? s.dataset.name : 'услуга уточню') + ', ' + (d ? d.dataset.full : 'день уточню') + (t ? ' в ' + t.value : ', время уточню') + '. Марку, год и что беспокоит напишу ниже.';
       bubble.textContent = msg;
       send.href = 'https://wa.me/70000000000?text=' + encodeURIComponent(msg);
     }
